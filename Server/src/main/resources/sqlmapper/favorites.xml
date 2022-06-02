@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.favoritesMapper">
+
+    <resultMap id="transaction" type="ApartTransactionDTO">
+        <result property="id" column="id"/>
+        <result property="siGunGu" column="si_gun_gu"/>
+        <result property="roadName" column="road_name"/>
+        <result property="danjiName" column="danji_name"/>
+        <result property="area" column="area"/>
+        <result property="contract_y_m" column="contract_y_m"/>
+        <result property="tradeAmount" column="trade_amount"/>
+        <result property="floor" column="floor"/>
+        <result property="buildYear" column="build_year"/>
+    </resultMap>
+
+    <select id="selectAll" resultMap="transaction" parameterType="String">
+        select *
+        from apart_transaction as ap
+        where ap.id = any(SELECT fa.apart_transaction_id FROM favorites as fa where fa.user_id = #{user_id});
+    </select>
+
+    <insert id="create" parameterType="FavoritesDTO">
+        insert into favorites values (#{userId}, #{apartTransactionId} );
+    </insert>
+
+
+    <delete id="delete" parameterType="FavoritesDTO">
+        delete from Favorites
+        where user_id = #{userId} and apart_transaction_id = #{apartTransactionId}
+    </delete>
+</mapper>

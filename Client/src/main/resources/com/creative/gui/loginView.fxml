@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="519.0" prefWidth="842.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.creative.gui.LogInController">
+   <children>
+      <TextField fx:id="txtID" layoutX="189.0" layoutY="232.0" prefHeight="35.0" prefWidth="268.0" promptText="아이디를 입력하세요.." />
+      <ImageView fitHeight="396.0" fitWidth="358.0" layoutX="484.0" layoutY="146.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/apart2.gif" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnLogin" layoutX="189.0" layoutY="326.0" mnemonicParsing="false" onAction="#login" prefHeight="35.0" prefWidth="268.0" text="로그인" />
+      <Line endX="749.5" layoutX="101.0" layoutY="108.0" startX="-100.0" />
+      <Line endX="50.5" endY="335.0" layoutX="101.0" layoutY="184.0" startX="50.5" startY="-75.5" />
+      <Text layoutX="14.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&gt; 로그인" />
+      <Text layoutX="189.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="로그인">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <Button fx:id="btnBack" layoutX="729.0" layoutY="28.0" mnemonicParsing="false" onAction="#back_Clicked" prefHeight="57.0" prefWidth="90.0" text="뒤로가기" />
+      <PasswordField fx:id="txtPassword" layoutX="189.0" layoutY="279.0" prefHeight="35.0" prefWidth="268.0" promptText="비밀번호를 입력하세요.." />
+   </children>
+</Pane>

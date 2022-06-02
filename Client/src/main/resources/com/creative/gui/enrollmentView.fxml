@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="505.0" prefWidth="843.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.creative.gui.EnrollmentController">
+   <children>
+      <Line endX="517.0" endY="-7.0" layoutX="325.0" layoutY="90.0" startX="-325.0" startY="-7.0" />
+      <Line endX="100.0" endY="243.0" layoutX="66.0" layoutY="270.0" startX="100.0" startY="-186.5" />
+      <Text layoutX="14.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&gt; 회원가입" wrappingWidth="88.0" />
+      <Text layoutX="191.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="회원가입">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <Text layoutX="208.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="아이디">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="208.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="비밀번호">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="208.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" text="이름">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="208.0" layoutY="332.0" strokeType="OUTSIDE" strokeWidth="0.0" text="이메일">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <TextField fx:id="userID" layoutX="318.0" layoutY="169.0" promptText="아이디를 입력하세요" />
+      <TextField fx:id="userPassword" layoutX="318.0" layoutY="215.0" promptText="비밀번호를 입력하세요" />
+      <TextField fx:id="userName" layoutX="318.0" layoutY="264.0" promptText="ex) 홍길동" />
+      <TextField fx:id="userMail" layoutX="318.0" layoutY="313.0" promptText="ex) abc123@naver.com" />
+      <Button fx:id="btnEnroll" layoutX="399.0" layoutY="398.0" mnemonicParsing="false" onAction="#enroll_Clicked" prefHeight="36.0" prefWidth="77.0" text="가입" />
+      <ImageView fitHeight="359.0" fitWidth="340.0" layoutX="506.0" layoutY="147.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/apart2.gif" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnBack" layoutX="753.0" layoutY="14.0" mnemonicParsing="false" onAction="#back_Clicked" prefHeight="65.0" prefWidth="88.0" text="뒤로가기" />
+   </children>
+</Pane>
